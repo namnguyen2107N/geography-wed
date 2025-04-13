@@ -1,0 +1,127 @@
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f8ff;
+
+}
+.earth-icon {
+    font-size: 40px;
+    color: #00ff26;
+    margin-bottom: 10px;
+}
+header h1 {
+    font-size: 36px;
+    color: #040c04;
+    text-transform: uppercase;
+    margin: 0;
+}
+
+header {
+    background-color: #37cb5f; 
+    color: white;
+    padding: 20px 0;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+header:hover {
+    background-color: #20d161; 
+    transform: translateY(-5px); 
+}
+nav {
+    background-color: #96e213;
+    padding: 15px;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    margin: 0 20px;
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: 16px;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+nav a:hover {
+    color: #51ee13;
+    transform: scale(1.1); 
+}
+main {
+    padding: 30px;
+    background-color: #ffffff;
+}
+
+section {
+    margin-bottom: 30px;
+    background-color: #f9f9f9;
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+section:hover {
+    transform: translateY(-10px); 
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); 
+
+}
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #4cfc38;
+    color: white;
+    box-shadow: 0 -4px 6px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+footer:hover {
+    background-color: #59da36;
+    transform: translateY(5px);
+}
+.back-link {
+    display: inline-block;
+    padding: 12px 25px;
+    margin-top: 20px;
+    text-decoration: none;
+    color: white;
+    background-color: #4441e2;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+}
+.back-link:hover {
+    background-color: #82db15;
+    transform: scale(1.1); 
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3); 
+}
+nav a:hover {
+    text-decoration: underline; /
+}
+img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+    display: block;
+    margin: 0 auto 20px;
+}
+.map-link {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 12px 20px;
+    background-color: #1e90ff;
+    color: white;
+    font-weight: bold;
+    border-radius: 8px;
+    text-decoration: none;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.map-link:hover {
+    background-color: #4682b4;
+    transform: scale(1.05);
+}

@@ -1,0 +1,74 @@
+/* Trái đất */
+.earth-icon {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    background: radial-gradient(circle at 30% 30%, #4fc3f7, #0288d1);
+    position: relative;
+    box-shadow: 0 0 20px rgba(0, 200, 255, 0.5);
+    animation: rotateEarth 10s linear infinite;
+    margin: 20px auto;
+    overflow: hidden;
+}
+
+/* Lục địa */
+.earth-icon::before,
+.earth-icon::after {
+    content: '';
+    position: absolute;
+    background-color: #4caf50;
+    border-radius: 50%;
+    opacity: 0.7;
+}
+
+.earth-icon::before {
+    top: 20%;
+    left: 25%;
+    width: 20px;
+    height: 20px;
+    transform: rotate(45deg);
+}
+
+.earth-icon::after {
+    bottom: 10%;
+    right: 15%;
+    width: 15px;
+    height: 15px;
+    transform: rotate(-30deg);
+}
+
+/* Quay trái đất */
+@keyframes rotateEarth {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+/* Đám mây */
+.cloud {
+    position: absolute;
+    top: 30%;
+    left: -40px;
+    width: 40px;
+    height: 20px;
+    background: #fff;
+    border-radius: 50px;
+    box-shadow:
+        10px 0px 0px #fff,
+        20px 0px 0px #fff;
+    opacity: 0.8;
+    animation: moveCloud 5s linear infinite;
+}
+
+/* Bay ngang đám mây */
+@keyframes moveCloud {
+    0% {
+        left: -40px;
+    }
+    100% {
+        left: 100%;
+    }
+}

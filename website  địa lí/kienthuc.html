@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kiến Thức Địa Lí</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .back-link {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 10px 15px;
+            background-color: #3cb371;
+            color: rgb(132, 229, 125);
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+            transition: background-color 0.3s ease;
+        }
+        .back-link:hover {
+            background-color: #2e8b57;
+        }
+        .back-link::before {
+            content: "\2190 ";
+        }
+        body {
+            font-family: 'Segoe UI', sans-serif;
+            background-image: url('https://upload.wikimedia.org/wikipedia/commons/thumb/e/e0/BlankMap-World-v2.png/2000px-BlankMap-World-v2.png');
+            background-size: cover;
+            background-attachment: fixed;
+            background-repeat: no-repeat;
+            background-position: center;
+            padding: 30px;
+            color: #222;
+        }
+        .panel {
+    padding: 0 18px;
+    display: none;
+    background-color: #f1f1f1;
+    overflow: hidden;
+    margin-top: 10px;
+    border-radius: 6px;
+}
+
+    </style>
+   
+    
+</head>
+
+    <header>
+        <div class="earth-icon">
+            <div class="cloud"></div>
+        </div>
+        <h1>Kiến Thức Địa Lí</h1>
+        <p>Tổng hợp các chủ đề lý thuyết trong môn Địa Lí</p>
+    </header>
+    <nav>
+        <a href="home.html">Trang Chủ</a>
+        <a href="thuchanh.html">Thực Hành</a>
+        <a href="bieudo.html">Biểu Đồ</a>
+    </nav>
+    <main>
+        <section>
+            <h1>📘 PHẦN I - ĐỊA LÍ TỰ NHIÊN VIỆT NAM</h1>
+
+            <label for="sectionSelect">📂 Vị trí địa lí và phạm vi lãnh thổ</label>
+            <select id="sectionSelect" onchange="showSection()">
+                <option value="">các mục</option>
+                <option value="section1">1. Vị trí địa lí và hình dạng lãnh thổ</option>
+                <option value="section2">2. Ý nghĩa của vị trí địa lí</option>
+                <option value="section3">3. Đặc điểm lãnh thổ</option>
+            </select>
+            
+            <div id="section1" class="section">
+                <h2>1. Vị trí địa lí và hình dạng lãnh thổ</h2>
+                <h4>a) Vị trí địa lí</h4>
+                <ul>
+                    <li>Thuộc vùng nội chí tuyến, khu vực gió mùa châu Á.</li>
+                    <li>Phía đông nam châu Á, giáp biển Đông.</li>
+                    <li>Là cầu nối giữa Đông Nam Á lục địa và biển đảo.</li>
+                    <li>Trên đường di cư của sinh vật.</li>
+                </ul>
+                <p><strong>Hệ toạ độ:</strong></p>
+                <ul>
+                    <li>Cực Bắc: 23°23’B – Hà Giang</li>
+                    <li>Cực Nam: 8°34’B – Cà Mau</li>
+                    <li>Cực Tây: 102°09’Đ – Điện Biên</li>
+                    <li>Cực Đông: 109°24’Đ – Khánh Hòa</li>
+                </ul>
+                <h4>b) Hình dạng lãnh thổ</h4>
+                <ul>
+                    <li>Dài theo chiều Bắc - Nam, hẹp theo chiều Đông - Tây.</li>
+                    <li>Kinh tuyến 105°Đ => Múi giờ thứ 7.</li>
+                </ul>
+            </div>
+            
+            <div id="section2" class="section">
+                <h2>2. Ý nghĩa của vị trí địa lí</h2>
+                <h4>a) Ý nghĩa tự nhiên</h4>
+                <ul>
+                    <li>Khí hậu nhiệt đới ẩm gió mùa, thiên nhiên phân hóa đa dạng.</li>
+                    <li>Giao tranh khối khí => thời tiết thất thường, dễ thiên tai.</li>
+                </ul>
+                <h4>b) Ý nghĩa kinh tế, xã hội</h4>
+                <ul>
+                    <li>Giao lưu kinh tế thuận lợi, cửa ngõ ra biển của nhiều nước.</li>
+                    <li>Đa dạng văn hóa, dân tộc do vị trí lịch sử di cư.</li>
+                    <li>Vị trí chiến lược quốc phòng.</li>
+                </ul>
+            </div>
+            
+            <div id="section3" class="section">
+                <h2>3. Đặc điểm lãnh thổ</h2>
+                <h4>a) Vùng đất</h4>
+                <ul>
+                    <li>Diện tích: 331.212 km². Đường biên giới đất liền gần 5000 km.</li>
+                    <li>Đường bờ biển: 3260 km. Có Hoàng Sa và Trường Sa.</li>
+                </ul>
+                <h4>b) Vùng biển</h4>
+                <ul>
+                    <li>Khoảng 1 triệu km². Giáp 8 quốc gia.</li>
+                    <li>Gồm 5 bộ phận: nội thủy, lãnh hải, tiếp giáp, đặc quyền kinh tế, thềm lục địa.</li>
+                </ul>
+                <h4>c) Vùng trời</h4>
+                <p>Không gian bao phủ trên lãnh thổ đất liền và biển.</p>
+            </div>
+            
+            <script>
+                function showSection() {
+                    const selected = document.getElementById("sectionSelect").value;
+                    const sections = document.querySelectorAll(".section");
+                    sections.forEach(sec => sec.style.display = "none");
+                    if (selected) {
+                        document.getElementById(selected).style.display = "block";
+                    }
+                }
+            </script>
+
+<header>
+    <h1>Thiên Nhiên Nhiệt Đới Ẩm Gió Mùa</h1>
+</header>
+
+<div class="content">
+    <div class="section">
+        <h2>I. Biểu hiện của thiên nhiên nhiệt đới ẩm gió mùa</h2>
+        <button class="accordion">1. Khí hậu</button>
+        <div class="panel">
+            <div class="section">
+                <h3>a) Tính chất nhiệt đới</h3>
+                <ul>
+                    <li>Lượng bức xạ Mặt Trời lớn (120 - 130kcal/cm²), cán cân bức xạ luôn dương.</li>
+                    <li>Nhiệt độ trung bình năm cao (>20°C), tổng nhiệt hoạt động lớn (8.000 – 10.000°C), số giờ nắng lớn (1.400 – 3.000 h/năm), biến trình nhiệt dương.</li>
+                    <li>Gió Tín phong thổi từ áp cao cận chí tuyến về áp thấp xích đạo qua lãnh thổ nước ta.</li>
+                    <li>Nguyên nhân: Vị trí địa lý nằm trong vùng nội chí tuyến BBC.</li>
+                </ul>
+            </div>
+            <div class="section">
+                <h3>b) Tính chất ẩm</h3>
+                <ul>
+                    <li>Lượng mưa trung bình năm lớn từ 1.500 – 2.000mm/năm. Ở các sườn đón gió và các vùng núi cao lên đến 3.000 – 4.000mm/năm.</li>
+                    <li>Độ ẩm tương đối cao trên 80 - 85%, cân bằng ẩm luôn dương.</li>
+                    <li>Nguyên nhân: Vị trí địa lý giáp Biển Đông; chịu ảnh hưởng của các khối khí qua biển; hình dạng lãnh thổ hẹp ngang.</li>
+                </ul>
+            </div>
+            <div class="section">
+                <h3>c) Gió mùa</h3>
+                <ul>
+                    <li>Vị trí địa lý nằm trong khu vực hoạt động của gió mùa Châu Á, chịu tác động của các khối khí theo mùa.</li>
+                    <li>Biểu hiện: Có sự hoạt động của hai mùa gió trái ngược nhau về hướng, tính chất và thời gian.</li>
+                </ul>
+            </div>
+        </div>
+
+        <button class="accordion">2. Gió mùa Đông Bắc (11-4)</button>
+        <div class="panel">
+            <ul>
+                <li>Nguồn gốc: Từ khối khí lạnh phương bắc (từ áp cao Xibia).</li>
+                <li>Hướng: Đông Bắc.</li>
+                <li>Thời gian hoạt động: Thổi theo từng đợt, từ tháng 11 đến tháng 4 năm sau.</li>
+                <li>Tính chất: Lạnh (khô, ẩm). Chủ yếu ở miền Bắc.</li>
+                <li>Nhiệt độ: Miền Bắc có mùa đông lạnh, làm hạ thấp nhiệt độ của nước ta trong mùa đông (Miền Bắc dưới 18°C).</li>
+                <li>Mưa: Nửa đầu mùa đông gây thời tiết khô, ít mưa ở Bắc Bộ. Nửa sau mùa đông gây mưa phùn ở ven biển Bắc Bộ.</li>
+            </ul>
+        </div>
+
+        <button class="accordion">3. Gió mùa hạ (5-10)</button>
+        <div class="panel">
+            <ul>
+                <li>Đầu mùa hạ (tháng 5-7): Từ khối khí nhiệt đới ẩm Bắc Ấn Độ Dương.</li>
+                <li>Tính chất: Nóng ẩm (chí tuyến Vịnh Bengal).</li>
+                <li>Hướng: Tây Nam.</li>
+                <li>Tác động: Gây mưa lớn cho Nam Bộ và Tây Nguyên; gây phơn (khô, nóng) cho đồng bằng ven biển Trung Bộ.</li>
+                <li>Giữa và cuối mùa hạ (tháng 6-10): Gió mùa tây nam từ áp cao chí tuyến bán cầu Nam.</li>
+                <li>Tác động: Gây mưa cho cả nước, mưa lớn cho Nam Bộ và Tây Nguyên.</li>
+            </ul>
+        </div>
+         <button class="accordion">1. Gió Tín phong bán cầu Bắc</button>
+    <div class="panel">
+        <p><strong>Nguồn gốc:</strong> Từ áp cao chí tuyến Tây Thái Bình Dương.</p>
+        <p><strong>Thời gian:</strong> Thổi quanh năm ở nước ta, mạnh lên khi gió mùa suy yếu.</p>
+        <p><strong>Hướng:</strong> Đông Bắc.</p>
+        <p><strong>Tính chất:</strong> Khô nóng.</p>
+        <p><strong>Tác động:</strong></p>
+        <ul>
+            <li>Tháng 11 – 4:
+                <ul>
+                    <li>Miền Bắc: Thổi xen kẽ với gió mùa Đông Bắc → thời tiết ấm áp, khô hanh, đôi khi nhiệt độ tăng (mùa đông).</li>
+                    <li>Ven biển miền Trung: Bị chắn bởi dãy Trường Sơn → gây mưa cho vùng ven biển.</li>
+                    <li>Tây Nguyên và Nam Bộ: Gây mùa khô sâu sắc (ít mưa), nhiệt độ cao.</li>
+                </ul>
+            </li>
+            <li>Tháng 5 – 10: Kết hợp với gió mùa hạ → tạo thành dải hội tụ nhiệt đới → gây mưa cho cả nước.</li>
+        </ul>
+        <p>Dải hội tụ nhiệt đới lùi dần từ Bắc xuống Nam → tháng mưa cực đại cũng lùi dần.</p>
+    </div>
+
+    <button class="accordion">2. Địa hình</button>
+    <div class="panel">
+        <p><strong>a. Biểu hiện của địa hình nhiệt đới ẩm gió mùa:</strong></p>
+        <ul>
+            <li>Các quá trình ngoại lực (phong hoá, xâm thực, bồi tụ) diễn ra mạnh mẽ.</li>
+            <li>Phong hoá:
+                <ul>
+                    <li>Nhiệt độ, độ ẩm cao → phong hoá nhanh → vỏ phong hoá dày, dễ thấm nước.</li>
+                </ul>
+            </li>
+            <li>Xâm thực:
+                <ul>
+                    <li>Ở miền núi: Mưa và dòng chảy mạnh → địa hình bị chia cắt → đất trượt, đá lở, lũ quét.</li>
+                    <li>Bán bình nguyên: Đồi thấp xen thung lũng rộng.</li>
+                </ul>
+            </li>
+            <li>Cac-xtơ:
+                <ul>
+                    <li>Đá vôi → cac-xtơ phát triển → đồng bằng, hang động đá vôi.</li>
+                </ul>
+            </li>
+            <li>Bồi tụ:
+                <ul>
+                    <li>Đồng bằng, thung lũng → bồi tụ → mở rộng đồng bằng ra biển.</li>
+                </ul>
+            </li>
+        </ul>
+        <p>→ Quá trình xâm thực – bồi tụ là quá trình chính tạo nên địa hình Việt Nam hiện nay.</p>
+    </div>
+  
+
+ <button class="accordion">b. Nguyên nhân địa hình mang tính chất nhiệt đới ẩm gió mùa</button>
+<div class="panel">
+    <p>Do khí hậu nhiệt đới ẩm gió mùa có:</p>
+    <ul>
+        <li>Nhiệt độ cao</li>
+        <li>Lượng mưa lớn và tập trung theo mùa</li>
+        <li>Địa hình dốc</li>
+        <li>Thành phần địa chất chủ yếu là đá vôi</li>
+    </ul>
+</div>
+
+<button class="accordion">c. Nhân tố tác động đến địa hình Việt Nam</button>
+<div class="panel">
+    <ul>
+        <li><strong>Nội lực:</strong> Các vận động kiến tạo:
+            <ul>
+                <li>Nâng lên → tạo núi</li>
+                <li>Sụt lún → tạo đồng bằng</li>
+            </ul>
+        </li>
+        <li><strong>Ngoại lực:</strong>
+            <ul>
+                <li>Khí hậu (nhiệt độ, độ ẩm)</li>
+                <li>Sông ngòi</li>
+                <li>Sóng biển</li>
+            </ul>
+            → Làm địa hình bị cắt xẻ, hình thành các dạng địa hình xâm thực, bồi tụ...
+        </li>
+    </ul>
+</div>
+
+<button class="accordion">3. Sông ngòi</button>
+<div class="panel">
+    <p><strong>Biểu hiện:</strong> Mật độ sông ngòi lớn, nhiều nước, nhiều phù sa, chế độ dòng chảy theo mùa và thất thường.</p>
+    <ul>
+        <li>Có khoảng 2.360 con sông dài trên 10 km → Do mưa lớn, địa hình bị cắt xẻ mạnh.</li>
+        <li>Tổng lượng dòng chảy khoảng 839 tỉ m³/năm → Do mưa lớn và lượng nước từ bên ngoài lãnh thổ.</li>
+        <li>Lượng phù sa ra biển hàng năm khoảng 200 triệu tấn → Do:
+            <ul>
+                <li>Mưa lớn, tập trung theo mùa</li>
+                <li>Địa hình dốc</li>
+                <li>Vỏ phong hóa dày (nhiều đất)</li>
+            </ul>
+        </li>
+        <li>Chế độ dòng chảy phân mùa rõ rệt:
+            <ul>
+                <li>Mùa lũ: 4 – 5 tháng, trùng với mùa mưa (chiếm 70 – 80% lượng nước năm)</li>
+                <li>Mùa cạn: 7 – 8 tháng, trùng với mùa khô</li>
+                <li>Phù sa cũng tập trung vào mùa lũ (80 – 90%)</li>
+            </ul>
+        </li>
+        <li>Chế độ dòng chảy thất thường → Do mưa thất thường</li>
+    </ul>
+   
+
+
+<button class="accordion">b. Nhân tố tác động đến chế độ nước sông</button>
+<div class="panel">
+    <ul>
+        <li>Chế độ mưa</li>
+        <li>Địa hình</li>
+        <li>Vỏ phong hóa</li>
+        <li>Thực vật</li>
+    </ul>
+</div>
+
+<button class="accordion">4. Đất</button>
+<div class="panel">
+    <p><strong>a. Biểu hiện đất mang tính chất nhiệt đới ẩm gió mùa</strong></p>
+    <ul>
+        <li>Quá trình hình thành đất: Chủ yếu là quá trình feralit, đặc trưng cho vùng khí hậu nhiệt đới ẩm gió mùa.</li>
+        <li><strong>Đặc điểm đất feralit:</strong>
+            <ul>
+                <li><strong>Chua:</strong> Do mưa lớn rửa trôi các chất bazơ, oxit silic.</li>
+                <li><strong>Đỏ vàng:</strong> Do tích tụ oxit sắt (Fe), nhôm (Al).</li>
+                <li><strong>Nghèo mùn:</strong> Nhiệt độ cao làm sinh vật phân hủy chất hữu cơ nhanh.</li>
+                <li><strong>Tầng dày:</strong> Phong hóa mạnh làm vỏ phong hóa dày.</li>
+            </ul>
+        </li>
+        <li><strong>Diện tích:</strong> Nhóm đất feralit phân bố rộng, đặc biệt ở vùng núi thấp và rìa đồng bằng.</li>
+    </ul>
+    <p><strong>b. Nhân tố hình thành đất:</strong></p>
+    <ul>
+        <li>Khí hậu (nhiệt, ẩm)</li>
+        <li>Địa hình đồi núi thấp</li>
+        <li>Đá mẹ</li>
+    </ul>
+    <table border ="1" style="border-collapse: collapse; width: 100%; margin-top: 10px;">
+        <tr><th>Nguyên nhân</th><th>Kết quả</th></tr>
+        <tr><td>Đất chua</td><td>Rửa trôi các chất bazơ</td></tr>
+        <tr><td>Đất đỏ vàng</td><td>Tích tụ oxit sắt, nhôm</td></tr>
+        <tr><td>Đất nghèo mùn</td><td>Phân giải nhanh do nhiệt cao</td></tr>
+        <tr><td>Đất chiếm diện tích lớn</td><td>Địa hình đồi núi</td></tr>
+    </table>
+</div>
+
+<button class="accordion">5. Sinh vật</button>
+<div class="panel">
+    <p><strong>a. Biểu hiện:</strong></p>
+    <ul>
+        <li>Thành phần loài nhiệt đới phong phú (chiếm ~70% thực vật): cây họ Đậu, Vang, Dầu,... động vật như chim công, vẹt, nai, khỉ...</li>
+        <li>Hệ sinh thái rừng nhiệt đới gió mùa đặc trưng: nhiều tầng tán, trữ lượng sinh khối lớn, nhưng diện tích đang bị suy giảm.</li>
+        <li>Cảnh quan tiêu biểu: rừng nhiệt đới ẩm gió mùa trên đất feralit.</li>
+    </ul>
+    <p><strong>b. Nguyên nhân:</strong></p>
+    <ul>
+        <li>Khí hậu nhiệt đới ẩm gió mùa tạo điều kiện phát triển sinh vật nhiệt đới.</li>
+        <li>Tính nhiệt đới suy giảm ở vùng núi cao hoặc do con người → xuất hiện sinh vật cận nhiệt, ôn đới.</li>
+    </ul>
+</div>
+
+<button class="accordion">II. Ảnh hưởng của thiên nhiên nhiệt đới ẩm gió mùa tới sản xuất và đời sống</button>
+<div class="panel">
+    <p><strong>1. Ảnh hưởng đến sản xuất</strong></p>
+    <p><em>Thuận lợi:</em></p>
+    <ul>
+        <li>Phát triển nông – lâm – ngư nghiệp quanh năm</li>
+        <li>Tăng vụ, đa dạng hóa sản phẩm</li>
+        <li>Sông ngòi nhiều nước → tưới tiêu, nuôi trồng thủy sản</li>
+        <li>Phát triển lâm nghiệp, trồng rừng, tăng độ che phủ</li>
+        <li>Phát triển thủy điện, giao thông đường thủy, du lịch, xây dựng</li>
+    </ul>
+    <p><em>Khó khăn:</em></p>
+    <ul>
+        <li>Thời tiết, khí hậu thất thường → khó lập kế hoạch mùa vụ</li>
+        <li>Dễ xảy ra thiên tai, dịch bệnh</li>
+        <li>Khí hậu nóng ẩm làm giảm độ bền công trình, thiết bị</li>
+        <li>Chế độ dòng chảy phân mùa → gián đoạn giao thông, du lịch</li>
+    </ul>
+
+    <p><strong>2. Ảnh hưởng tới đời sống</strong></p>
+    <p><em>Thuận lợi:</em></p>
+    <ul>
+        <li>Cung cấp nước sinh hoạt</li>
+        <li>Các hoạt động sinh hoạt diễn ra quanh năm</li>
+    </ul>
+    <p><em>Khó khăn:</em></p>
+    <ul>
+        <li>Thiên tai, thời tiết cực đoan, biến đổi khí hậu gây thiệt hại lớn</li>
+        <li>Bệnh nhiệt đới dễ bùng phát, ảnh hưởng sức khỏe</li>
+    </ul>
+</div>
+
+</div>
+
+<script>
+   var acc = document.getElementsByClassName("accordion");
+for (var i = 0; i < acc.length; i++) {
+    acc[i].addEventListener("click", function() {
+        this.classList.toggle("active");
+        var panel = this.nextElementSibling;
+       
+        if (panel.style.display === "block") {
+            panel.style.display = "none";
+        } else {
+            panel.style.display = "block"; 
+        }
+    });
+}
+</script>
+        <section>
+            <h2>Dân cư và Kinh tế</h2>
+            <p>Thông tin về phân bố dân cư, đô thị hóa, cũng như các ngành kinh tế chính như nông nghiệp, công nghiệp, dịch vụ.</p>
+        </section>
+
+        <a class="back-link" href="home.html">Quay về Trang Chủ</a>
+    </main>
+    <footer>
+        <p>Được tạo bởi IT Nguyễn Phúc Nam :3</p>
+    </footer>
+</body>
+</html>

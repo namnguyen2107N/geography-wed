@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <title>Đăng nhập</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #e0f7fa;
+      display: flex;
+      height: 100vh;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .login-box {
+      background: white;
+      padding: 30px;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+      text-align: center;
+    }
+
+    input[type="text"],
+    input[type="password"] {
+      width: 90%;
+      padding: 10px;
+      margin: 10px 0;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+
+    button {
+      padding: 10px 20px;
+      background-color: #0288d1;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      font-size: 16px;
+    }
+
+    button:hover {
+      background-color: #0277bd;
+    }
+
+    .error {
+      color: red;
+      margin-top: 10px;
+    }
+  </style>
+</head>
+<body>
+
+<div class="login-box">
+  <h2>🔐 Đăng nhập</h2>
+  <input type="text" id="username" placeholder="Tên đăng nhập"><br>
+  <input type="password" id="password" placeholder="Mật khẩu"><br>
+  <button onclick="login()">Đăng nhập</button>
+  <p class="error" id="errorMsg"></p>
+</div>
+
+<script>
+  function login() {
+    const username = document.getElementById('username').value.trim();
+    const password = document.getElementById('password').value;
+
+    // Thông tin đăng nhập mẫu (có thể thay đổi)
+    const correctUsername = "admin";
+    const correctPassword = "123456";
+
+    if (username === correctUsername && password === correctPassword) {
+      alert("🎉 Đăng nhập thành công!");
+      // Chuyển hướng sang trang chính
+      window.location.href = "home.html"; // Đổi theo tên file của bạn
+    } else {
+      document.getElementById("errorMsg").innerText = "❌ Sai tên đăng nhập hoặc mật khẩu!";
+    }
+  }
+</script>
+
+</body>
+</html>

@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thực Hành Địa Lí</title>
+    <link rel="stylesheet" href="styles.css"> 
+    <style>
+    body {
+        text-align: center;
+        background: #f0f0f0;
+        font-family: Arial, sans-serif;
+      }
+      canvas {
+        border: 2px solid #444;
+        cursor: crosshair;
+        max-width: 100%;
+        margin-bottom: 10px;
+      }
+      .tools {
+        margin: 10px;
+      }
+      .tools input, .tools button {
+        padding: 8px;
+        font-size: 16px;
+        margin: 5px;
+      }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="earth-icon">
+            <div class="cloud"></div>
+        </div>
+        <div class="earth-icon">
+            <i class="fas fa-globe-americas"></i> 
+        </div>
+        <h1>Thực Hành Địa Lí</h1>
+    </header>
+
+    <nav>
+        <a href="home.html">Trang Chủ</a>
+        <a href="kienthuc.html">Kiến Thức</a>
+        <a href="thuchanh.html">Thực Hành</a>
+        <a href="bieudo.html">Biểu Đồ</a>
+    </nav>
+
+    <main>
+        <section>
+            <h2>Bài Tập 1: Vị trí địa lý</h2>
+            <p>Hãy xác định vị trí của các quốc gia sau trên bản đồ thế giới:</p>
+            <ul>
+                <li>Việt Nam</li>
+                <li>Hoa Kỳ</li>
+                <li>Brazil</li>
+            </ul>
+            <label for="answer">Trả lời:</label>
+            <textarea id="answer" placeholder="Ghi câu trả lời của bạn"></textarea>
+        </section>
+
+        <section>
+            <h2>Bài Tập 2: Các kiểu khí hậu</h2>
+            <p>Hãy chọn các kiểu khí hậu tương ứng với các khu vực sau:</p>
+            <ul>
+                <li>Đới nóng: <input type="text" placeholder="Điền vào đây"></li>
+                <li>Đới ôn hòa: <input type="text" placeholder="Điền vào đây"></li>
+                <li>Đới lạnh: <input type="text" placeholder="Điền vào đây"></li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>Bài Tập 3: Phân tích biểu đồ</h2>
+            <p>Nhìn vào biểu đồ dưới đây và trả lời câu hỏi: "Điều gì nổi bật nhất trong biểu đồ này?"</p>
+            <img src="biểu đồ.png" alt="Biểu đồ khí hậu" />
+            <textarea placeholder="Ghi câu trả lời của bạn ở đây..."></textarea>
+        </section>
+        
+    </main>
+    <h2> Vẽ bản đồ địa hình Việt Nam</h2>
+
+  <div class="tools">
+    🎨 Màu vẽ: <input type="color" id="colorPicker" value="#ff0000">
+    <button onclick="clearCanvas()">🧹Xóa bản vẽ</button>
+  </div>
+
+  <canvas id="canvas" width="800" height="1200"></canvas>
+
+  <script>
+    const canvas = document.getElementById('canvas');
+    const ctx = canvas.getContext('2d');
+    const colorPicker = document.getElementById('colorPicker');
+
+    let drawing = false;
+    let drawColor = colorPicker.value;
+
+    // Load ảnh bản đồ
+    const img = new Image();
+    img.src = '11-ban-do-dia-hinh-viet-nam.jpg'; // Tên ảnh bạn đã tải lên
+    img.onload = () => {
+      ctx.drawImage(img, 0, 0, canvas.width, canvas.height);
+    };
+
+    // Cập nhật màu khi chọn màu mới
+    colorPicker.addEventListener('change', () => {
+      drawColor = colorPicker.value;
+    });
+
+    canvas.addEventListener('mousedown', () => drawing = true);
+    canvas.addEventListener('mouseup', () => drawing = false);
+    canvas.addEventListener('mouseout', () => drawing = false);
+
+    canvas.addEventListener('mousemove', e => {
+      if (!drawing) return;
+      const rect = canvas.getBoundingClientRect();
+      const x = e.clientX - rect.left;
+      const y = e.clientY - rect.top;
+
+      ctx.fillStyle = drawColor;
+      ctx.beginPath();
+      ctx.arc(x, y, 3, 0, Math.PI * 2);
+      ctx.fill();
+    });
+
+    // Hàm xóa bản vẽ và vẽ lại ảnh bản đồ
+    function clearCanvas() {
+      ctx.clearRect(0, 0, canvas.width, canvas.height);
+      ctx.drawImage(img, 0, 0, canvas.width, canvas.height);
+    }
+  </script>
+
+</body>
+</html>
